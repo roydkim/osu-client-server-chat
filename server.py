@@ -23,8 +23,6 @@ def serverFunction():
     print(str(data))
     print('Type /q to quit')
     print('Enter message to send...')
-    # The following code is taken from:
-    # https://www.chegg.com/homework-help/questions-and-answers/using-python-3-write-simple-client-server-program-using-python-sockets-program-emulate-sim-q69849994
     while True: # loops while connection exists
         data = rsocket.recv(1024).decode() # reads and decodes data throughout loop
         if not data: # if no data, the loop breaks

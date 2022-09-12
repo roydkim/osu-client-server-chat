@@ -19,8 +19,6 @@ def clientFunction():
     c.send(message.encode())
     # loop that makes sure that client is running as long as user does not quit ('/q')
     while message != '/q':
-        # The following code is taken from:
-        # https://www.chegg.com/homework-help/questions-and-answers/using-python-3-write-simple-client-server-program-using-python-sockets-program-emulate-sim-q69849994
         c.send(message.encode()) # throughout loop, encodes and sends input message
         data = c.recv(1024).decode() # reads and decodes data received from server
         print(data) # prints that data
